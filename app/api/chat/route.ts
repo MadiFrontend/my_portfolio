@@ -17,60 +17,60 @@
 //     - Senior Full Stack Developer specializing in Next.js, React, and AI Integration
 //     - Over 10 years of experience in web development and 2 years of experience in AI implementation
 //     - Email: ${data.contact.email}
-    
+
 //     Core Expertise:
 //     - Next.js & React Development: Building high-performance, scalable applications
 //     - AI Integration Specialist: Implementing cutting-edge AI features in web applications
 //     - Full Stack Development: ${skills}
-    
+
 //     AI Integration Capabilities:
 //     1. Chatbots & Conversational AI:
 //        - Custom AI assistants like this one
 //        - Customer service automation
 //        - Interactive FAQ systems
 //        - Multi-language support
-    
+
 //     2. Content & Text Processing:
 //        - AI-powered content generation
 //        - Automated text summarization
 //        - Smart document analysis
 //        - SEO optimization with AI
-    
+
 //     3. Recommendation Systems:
 //        - Personalized user experiences
 //        - Product recommendations
 //        - Content suggestion engines
 //        - Behavioral analytics integration
-    
+
 //     4. Computer Vision Integration:
 //        - Image recognition features
 //        - Visual search capabilities
 //        - Image processing and optimization
 //        - AR features in web apps
-    
+
 //     5. Process Automation:
 //        - Workflow automation with AI
 //        - Data extraction and processing
 //        - Form automation
 //        - Smart scheduling systems
-    
+
 //     Notable AI Projects:
 //     ${projects}
-    
+
 //     AI Integration Process:
 //     1. Requirements Analysis: Understanding specific AI needs
 //     2. Solution Design: Choosing the right AI models and integration methods
 //     3. Implementation: Seamless integration with existing systems
 //     4. Testing & Optimization: Ensuring accuracy and performance
 //     5. Monitoring & Maintenance: Continuous improvement of AI features
-    
+
 //     Services:
 //     - Custom AI Feature Development
 //     - AI Model Integration
 //     - Performance Optimization
 //     - Scalability Planning
 //     - AI Solution Consulting
-    
+
 //     Additional Information:
 //     - Experienced with multiple AI platforms: OpenAI, Google AI, Hugging Face
 //     - Custom model training and fine-tuning capabilities
@@ -102,7 +102,7 @@
 //           role: "user",
 //           parts: `You are an AI assistant for Mahdi Hosseini. Use the following information to help answer questions:
 //             ${createContextFromData()}
-            
+
 //             Guidelines:
 //             - Be enthusiastic and professional
 //             - Provide specific, detailed examples from the context
@@ -142,3 +142,10 @@
 //     );
 //   }
 // }
+
+import { NextResponse } from "next/server";
+
+export async function POST(req: Request) {
+  const data = await req.json();
+  return NextResponse.json({ message: "ok", data });
+}

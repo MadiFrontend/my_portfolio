@@ -18,13 +18,13 @@ export default function ContactSection() {
       id="contact"
       className="w-full flex flex-col items-center container py-32"
     >
-      <Image
+      {/* <Image
         src="/imgs/logo.png"
         alt="Contact"
         width={150}
         height={150}
         className="my-4"
-      />
+      /> */}
       <h1 className="text-center text-2xl md:text-4xl  mb-12">
         <span className="text-gradient-primary">{"{ "}</span>
         Contact Me

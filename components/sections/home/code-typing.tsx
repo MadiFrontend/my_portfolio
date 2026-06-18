@@ -8,11 +8,11 @@ const defaultProps = {
 };
 
 const codeSnippet = `// Welcome to my Portfolio! 🚀
-import { NextDeveloper } from 'mahdihosseini';
+import { FullStackDeveloper } from 'Mahdi-Hosseini';
 
 function createAmazingWebsite() {
   const mySkills = {
-    webDev: ["Next.js", "React", "TS"],
+    webDev: ["Next.js", "React", "TS", "JS", "Node.js", "Nest.js", "PostgreSql"],
     passion: "Building web apps"
   };
 

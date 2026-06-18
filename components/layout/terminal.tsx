@@ -98,7 +98,7 @@ export default function Terminal() {
         <li className="cursor-pointer hover:text-foreground">GITLENS</li>
       </ul>
       {/* console */}
-      <ul ref={ref} className="w-full px-6 pt-8 pb-4 cursor-text h-full overflow-y-scroll" onClick={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
+      <ul ref={ref} className="w-full px-6 pt-8 pb-4 cursor-text h-full overflow-hidden" onClick={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
         {terminalLines.map((line) => {
           const lineArr = line.split("✓");
           return (

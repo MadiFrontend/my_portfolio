@@ -4,10 +4,11 @@ import "./globals.css";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
   title: {
     default:
-      "Mahdi Hosseini | Next.js & React Developer | AI Integration Specialist",
+      "Mahdi Hosseini | Fullstack Developer | AI Integration Specialist",
     template: "%s | Mahdi Hosseini",
   },
   description:
@@ -31,26 +32,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mahdihosseini.com",
-    siteName: "Mahdi Hosseini Portfolio",
-    title: "Mahdi Hosseini | Next.js & React Developer",
+    url: "https://mahdihosseini.site",
+    siteName: "Mahdi Hosseini | Fullstack Developer",
+    title: "Mahdi Hosseini | Fullstack Developer",
     description:
       "Senior Full Stack Developer specializing in Next.js, React, and AI Integration. Building high-performance web applications.",
     images: [
       {
-        url: "/imgs/website.png",
-        width: 1200,
+        url: "/imgs/profile.jpeg",
+        width: 630,
         height: 630,
-        alt: "Mahdi Hosseini - Next.js & React Developer",
+        alt: "Mahdi Hosseini - Fullstack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahdi Hosseini | Next.js & React Developer",
+    title: "Mahdi Hosseini | Fullstack Developer",
     description:
       "Senior Full Stack Developer specializing in Next.js, React, and AI Integration",
-    images: ["/imgs/website.png"],
+    images: ["/imgs/profile.jpeg"],
     creator: "@mahdihosseini",
   },
   robots: {
@@ -65,11 +66,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://mahdihosseini.com",
+    canonical: "https://mahdihosseini.site",
   },
   icons: {
-    icon: "/imgs/logo.png",
-    apple: "/imgs/logo.png",
+    icon: "/imgs/profile.jpeg",
+    apple: "/imgs/profile.jpeg",
   },
 };
 

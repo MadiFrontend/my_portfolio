@@ -3,7 +3,7 @@ import useCurSection from "@/hooks/use-cur-section";
 import Image from "next/image";
 import { Fragment, useRef } from "react";
 import { motion } from "framer-motion";
-import profile from "@/public/imgs/profile.jpeg";
+import profile from "@/public/imgs/mahdi-hosseini.jpeg";
 
 export default function AboutSection() {
   const ref = useRef(null);
@@ -38,7 +38,7 @@ export default function AboutSection() {
               className="size-full rounded-full grayscale-0 transition-all object-cover"
               width={600}
               height={600}
-              alt="about profile image"
+              alt="Mahdi Hosseini | Software Engineer | Frontend Engineer"
               src={profile}
             />
           </motion.div>

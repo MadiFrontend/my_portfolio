@@ -1,11 +1,13 @@
 "use client";
 import useCurSection from "@/hooks/use-cur-section";
 import Image from "next/image";
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import profile from "@/public/imgs/mahdi-hosseini.jpeg";
+import data from "@/data";
 
 export default function AboutSection() {
+  const { about } = data;
   const ref = useRef(null);
   useCurSection(ref);
   return (
@@ -38,7 +40,7 @@ export default function AboutSection() {
               className="size-full rounded-full grayscale-0 transition-all object-cover"
               width={600}
               height={600}
-              alt="Mahdi Hosseini | Software Engineer | Frontend Engineer"
+              alt="Mahdi Hosseini | Software Engineer | Full-Stack"
               src={profile}
             />
           </motion.div>
@@ -48,57 +50,51 @@ export default function AboutSection() {
           <h2 className="text-xl md:text-3xl font-bold">
             <span className="text-secondary">{"< "}</span>
 
-            <span className="text-gradient-secondary">Who am I</span>
+            <span className="text-muted-foreground">Who am I</span>
             <span className="text-secondary">{" />"}</span>
           </h2>
-          <motion.p
+          <motion.div
             initial={{ y: "-20%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, ease: "easeIn", duration: 0.5 }}
-            className="text-muted-foreground text-justify"
+            className="text-muted-foreground text-left space-y-6"
           >
-            Hey, I’m Mahdi Hosseini, a Next.js & React developer who helps
-            businesses fix, optimize, scale, and build high-performance web
-            applications. If your app is slow, buggy, struggling to scale —I can help.
-            <br />
-            <br />
-            <span className="font-semibold">📌 What I Do Best:</span>
-            <br />
-            ✅ Fixing Bugs & Broken Code – Debugging, API issues, UI glitches
-            that frustrate users.
-            <br />
-            ✅ Optimizing Performance – Speeding up apps, improving SEO, and
-            delivering a smooth experience.
-            <br />
-            ✅ Scaling Web Apps – Making sure your app grows without downtime or
-            technical limits.
-            <br />
-            ✅ Building from Scratch – Creating fast, scalable, and future-proof
-            Next.js applications.
-            <br />
-            <br />
-            <span className="font-semibold">📌 Why Work With Me?</span>
-            <br />
-            🔹 I focus on real results, not just code. Your web app should run
-            fast, handle traffic, and grow without breaking—I make sure it does.
-            <br />
-            🔹 I work fast and efficiently. No endless back-and-forth, no
-            unnecessary delays—just solutions that work.
-            <br />
-            🔹 I don’t just fix problems—I prevent them. Whether optimizing an
-            existing app or building something new, I ensure it’s scalable,
-            maintainable, and built for the long run.
-            <br />
-            <br />
-            <span className="font-semibold">📌 Let&apos;s Talk</span>
-            <br />
-            If your app needs fixing, optimizing, scaling, or building,
-            let&apos;s connect.
-            <br />
-            <a href="#contact" className="text-primary hover:underline">
-              ✅ Get in Touch
-            </a>
-          </motion.p>
+            <p>{about.intro}</p>
+
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">
+                What I work on
+              </h3>
+              <ul className="space-y-2">
+                {about.focusAreas.map((area) => (
+                  <li key={area.title}>
+                    <span className="text-secondary">{area.title}</span>
+                    {" — "}
+                    {area.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">How I work</h3>
+              <ul className="space-y-1">
+                {about.principles.map((principle) => (
+                  <li key={principle}>
+                    <span className="text-secondary">{"> "}</span>
+                    {principle}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <p>
+              {about.cta.text}{" "}
+              <a href={about.cta.link} className="text-primary hover:underline">
+                {about.cta.label} →
+              </a>
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

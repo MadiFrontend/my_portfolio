@@ -14,13 +14,15 @@
 
 //   return `
 //     About Mahdi Hosseini:
-//     - Senior Full Stack Developer specializing in Next.js, React, and AI Integration
-//     - Over 10 years of experience in web development and 2 years of experience in AI implementation
+//     - Software Engineer (Full-Stack) with 5+ years of experience building web products end to end
 //     - Email: ${data.contact.email}
 
 //     Core Expertise:
-//     - Next.js & React Development: Building high-performance, scalable applications
-//     - AI Integration Specialist: Implementing cutting-edge AI features in web applications
+//     - Frontend: Next.js, React, TypeScript, Tailwind CSS, Material UI, React Query, Redux
+//     - Backend: Node.js, NestJS, Express, PostgreSQL, MongoDB, Redis, Prisma, GraphQL, Zod
+//     - AI-Assisted Development: Cursor, Claude and similar AI coding tools for faster shipping
+//     - DevOps & CI/CD: Docker, GitLab CI, Nginx, Linux
+//     - Observability & Performance: Prometheus, Grafana, Sentry, Lighthouse
 //     - Full Stack Development: ${skills}
 
 //     AI Integration Capabilities:
@@ -113,12 +115,12 @@
 //             - Use bullet points or numbered lists for better readability
 //             - Always mention relevant experience and past projects
 //             - For specific project inquiries, guide users to the contact form
-//             - Focus on Aga's expertise in Next.js, React, and advanced AI integration`,
+//             - Focus on Mahdi's full-stack expertise across frontend, backend, DevOps and performance`,
 //         },
 //         {
 //           role: "model",
 //           parts:
-//             "I understand. I'll act as Aga's AI assistant, providing detailed, confident responses about her extensive experience in AI integration, Next.js development, and full-stack capabilities. I'll emphasize her practical approach and successful project implementations while maintaining professionalism and enthusiasm.",
+//             "I understand. I'll act as Mahdi's AI assistant, providing detailed, confident responses about his full-stack engineering experience across frontend, backend, DevOps and performance. I'll emphasize his practical approach and successful project implementations while maintaining professionalism and enthusiasm.",
 //         },
 //         ...messages.slice(-MESSAGE_HISTORY_LIMIT).map((msg: any) => ({
 //           role: msg.role === "assistant" ? "model" : "user",

@@ -7,25 +7,24 @@ const defaultProps = {
   theme: themes.vsDark,
 };
 
-const codeSnippet = `// Welcome to my Portfolio! 🚀
-import { FullStackDeveloper } from 'Mahdi-Hosseini';
+const codeSnippet = `// Welcome to my portfolio 🚀
+import { SoftwareEngineer } from "mahdi-hosseini";
 
-function createAmazingWebsite() {
-  const mySkills = {
-    webDev: ["Next.js", "React", "TS", "JS", "Node.js", "Nest.js", "PostgreSql"],
-    passion: "Building web apps"
-  };
+const mahdi = new SoftwareEngineer({
+  experience: "5+ years",
+  frontend: ["Next.js", "React", "TS", "JS", "TailwindCSS", "Redux", "TanStack Query"],
+  backend: ["Node.js", "NestJS", "PostgreSQL", "Redis"],
+  ai: ["Cursor", "Claude", "AI Coding"],
+  devops: ["Docker", "GitLab CI", "Nginx", "Linux"],
+  observability: ["Prometheus", "Grafana", "Sentry"],
+});
 
-  return {
-    message: "Let's work together!",
-    services: ["Web Apps","Frontend","Backend"],
-    contact: "Scroll down to connect →"
-  };
-};`;
+mahdi.ship({ from: "idea", to: "production" });
+// Scroll down to see it in action ↓`;
 
 export default function CodeTyping() {
   const [displayedLines, setDisplayedLines] = useState<string[]>(
-    Array(codeSnippet.split("\n").length).fill("")
+    Array(codeSnippet.split("\n").length).fill(""),
   );
   const [currentLine, setCurrentLine] = useState(0);
   const [cursorPosition, setCursorPosition] = useState(0);
@@ -35,19 +34,24 @@ export default function CodeTyping() {
     if (currentLine >= lines.length) return;
 
     const currentText = lines[currentLine];
-    const timeout = setTimeout(() => {
-      if (cursorPosition < currentText.length) {
-        setDisplayedLines((prev) =>
-          prev.map((line, i) =>
-            i === currentLine ? currentText.slice(0, cursorPosition + 1) : line
-          )
-        );
-        setCursorPosition(cursorPosition + 1);
-      } else {
-        setCurrentLine(currentLine + 1);
-        setCursorPosition(0);
-      }
-    }, Math.random() * 50 + 30);
+    const timeout = setTimeout(
+      () => {
+        if (cursorPosition < currentText.length) {
+          setDisplayedLines((prev) =>
+            prev.map((line, i) =>
+              i === currentLine
+                ? currentText.slice(0, cursorPosition + 1)
+                : line,
+            ),
+          );
+          setCursorPosition(cursorPosition + 1);
+        } else {
+          setCurrentLine(currentLine + 1);
+          setCursorPosition(0);
+        }
+      },
+      Math.random() * 50 + 30,
+    );
 
     return () => clearTimeout(timeout);
   }, [currentLine, cursorPosition]);

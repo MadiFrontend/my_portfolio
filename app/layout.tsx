@@ -1,38 +1,51 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import data from "@/data";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
+
+const siteTitle = "Mahdi Hosseini | Software Engineer | Full-Stack";
+const siteDescription =
+  "Software engineer with 5+ years of experience building full-stack web products with Next.js, React, Node.js, NestJS and PostgreSQL. From AI-assisted development with tools like Cursor and Claude to CI/CD, Docker deployments, monitoring and performance.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahdihosseini.site"),
 
   title: {
-    default: "Mahdi Hosseini | Software Engineer | Frontend Engineer",
+    default: siteTitle,
     template: "%s | Mahdi Hosseini",
   },
 
-  description:
-    "Mahdi Hosseini is a Software Engineer and Frontend Engineer specializing in React, Next.js, TypeScript, and modern web application development. Focused on building scalable, high-performance, accessible, and production-ready digital products.",
+  description: siteDescription,
 
   keywords: [
     "Mahdi Hosseini",
     "Mahdi Hosseini Portfolio",
     "Software Engineer",
+    "Full-Stack Engineer",
+    "Full-Stack Developer",
     "Frontend Engineer",
-    "Frontend Developer",
+    "Backend Engineer",
     "React Developer",
     "Next.js Developer",
+    "Node.js Developer",
+    "NestJS Developer",
     "TypeScript Developer",
-    "JavaScript Developer",
-    "Product Engineer",
-    "Full Stack Engineer",
+    "PostgreSQL",
+    "DevOps",
+    "CI/CD",
+    "Docker",
+    "GitLab CI",
+    "Observability",
     "Web Performance",
-    "Accessible Web Applications",
     "Scalable Web Applications",
-    "AI-assisted Software Engineering",
-    "AI Integration",
-    "Software Engineer",
+    "AI-Assisted Development",
+    "Cursor AI",
+    "Claude AI",
+    "React Query",
+    "Material UI",
+    "Tailwind CSS",
   ],
 
   authors: [
@@ -48,19 +61,18 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Mahdi Hosseini | Software Engineer | Frontend Engineer",
+    siteName: siteTitle,
 
-    title: "Mahdi Hosseini | Software Engineer | Frontend Engineer",
+    title: siteTitle,
 
-    description:
-      " Software Engineer | Frontend Engineer specializing in React, Next.js, TypeScript, performance, accessibility, and scalable web applications.",
+    description: siteDescription,
 
     images: [
       {
         url: "/imgs/mahdi-hosseini.jpeg",
         width: 800,
         height: 800,
-        alt: "Mahdi Hosseini | Software Engineer | Frontend Engineer",
+        alt: siteTitle,
       },
     ],
   },
@@ -68,10 +80,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Mahdi Hosseini | Software Engineer | Frontend Engineer",
+    title: siteTitle,
 
-    description:
-      "Software Engineer | Frontend Engineer specializing in React, Next.js, TypeScript, and scalable, high-performance web applications.",
+    description: siteDescription,
 
     images: ["/imgs/mahdi-hosseini.jpeg"],
 
@@ -101,11 +112,10 @@ const jsonLd = {
   name: "Mahdi Hosseini",
   url: "https://www.mahdihosseini.site/",
   image: "https://www.mahdihosseini.site/imgs/mahdi-hosseini.jpeg",
-  jobTitle: "Ai Software Engineer | Frontend Engineer",
-  sameAs: [
-    // "https://www.linkedin.com/in/your-profile",
-    "https://github.com/madifrontend",
-  ],
+  jobTitle: "Software Engineer",
+  description: siteDescription,
+  knowsAbout: data.technologies.skills.map((skill) => skill.name),
+  sameAs: data.sidebar.links.map((link) => link.link).filter(Boolean),
 };
 export default function RootLayout({
   children,

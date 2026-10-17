@@ -57,11 +57,11 @@ export default function HomeSection() {
             }}
             variant="gradientOutline"
           >
-            See My Work
+            View Projects
           </Button>
           {data.home.cvLink && (
             <Button asChild className="bg-muted-foreground/5" variant="ghost">
-              <Link href={data.home.cvLink}>Contact Me</Link>
+              <Link href={data.home.cvLink}>Let&apos;s Talk</Link>
             </Button>
           )}
         </div>

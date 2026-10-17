@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="w-full h-7 bg-background flex items-center justify-center gap-1 border-t text-xs [&_span]:text-primary text-muted-foreground">
-      <span>&copy;</span>Made with ❤️ by Mahdi Hosseini
+      <span>&copy;</span>Designed &amp; built by Mahdi Hosseini
     </div>
   );
 }

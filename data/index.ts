@@ -69,6 +69,57 @@ const data = {
     ],
   },
 
+  experience: {
+    subtitle:
+      "Roles where I owned features end to end — from UI to APIs, data and deployment.",
+    jobs: [
+      {
+        id: 1,
+        role: "Full-Stack Engineer",
+        company: "Tikkaa",
+        location: "Remote / Iran",
+        period: "2023 — Present",
+        type: "Full-time",
+        bullets: [
+          "Built and scaled core product features for one of Iran's largest online language-learning platforms serving thousands of students.",
+          "Owned Next.js frontends and Node.js APIs for courses, dashboards, payments and progress tracking under real production traffic.",
+          "Improved rendering performance, SEO and Core Web Vitals while keeping the learning experience fast on mobile and desktop.",
+          "Set up Dockerized deployments, CI pipelines and observability so releases stayed repeatable and regressions were caught early.",
+        ],
+        tech: ["Next.js", "TypeScript", "NestJS", "PostgreSQL", "Docker", "GitLab CI"],
+      },
+      {
+        id: 2,
+        role: "Frontend Engineer",
+        company: "Freelance & Product Teams",
+        location: "Remote",
+        period: "2021 — 2023",
+        type: "Contract",
+        bullets: [
+          "Delivered responsive, accessible UIs with React, Next.js and TypeScript for e-commerce and SaaS-style products.",
+          "Implemented complex client state (Redux Toolkit / React Query), payment flows and Jest coverage for checkout-critical paths.",
+          "Partnered with designers and backend engineers to ship features from wireframe to production without handoff gaps.",
+          "Focused on predictable architecture so catalogs, carts and dashboards stayed maintainable as requirements grew.",
+        ],
+        tech: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS", "Stripe", "Jest"],
+      },
+      {
+        id: 3,
+        role: "Software Engineer",
+        company: "Independent Projects",
+        location: "Remote",
+        period: "2019 — 2021",
+        type: "Full-time",
+        bullets: [
+          "Started shipping full web products end to end: interfaces, APIs, databases and basic VPS / Nginx deployments.",
+          "Built reusable UI patterns and API contracts that made iteration faster across personal and client work.",
+          "Learned production discipline early: readable code, solid data models and measuring performance before guessing.",
+          "Grew into the full-stack workflow I use today — owning features from design through deploy.",
+        ],
+        tech: ["JavaScript", "Node.js", "Express", "MongoDB", "Linux", "Nginx"],
+      },
+    ],
+  },
   projects: {
     subtitle:
       "Products I've designed, built, shipped and kept running in production.",
